@@ -15,30 +15,56 @@ const projects = [
   {
     num: '01',
     title: 'Personal Blog',
-    description: 'Backend Java project with Spring Boot',
+    description: 'Backend Java project with VUE as frontend framework',
     stack: [
-      {
-        name:"Java"
-      },
       {
         name: "Spring Boot"
       },
       {
-        name: "Spring Security"
+        name: "Mybatis"
       },
       {
-        name: "Mybatis"
+        name: "Redis"
+      },
+      {
+        name: "Swagger"
+      },
+      {
+        name: "Docker"
       },
     ],
     image: '/assets/project/blog.png',
-    github: '/project',
+    github: 'https://github.com/LavaXD/MyBlog/blob/main/Notes.md',
     live: "Live Project",
-    url: ""
+    url: "http://47.91.46.158:8093/"
   },
   {
     num: '02',
+    title: 'Personal Website',
+    description: 'Frontend Next.js & React.js project',
+    stack: [
+      {
+        name: "Next.js"
+      },
+      {
+        name: "React"
+      },
+      {
+        name: "FramerMotion"
+      },
+      {
+        name: "Vercel"
+      },
+    ],
+    image: '/assets/project/website.png',
+    github: 'https://github.com/LavaXD/shy-portfolio',
+    live: "Live Project",
+    url: "https://shy-portfolio.vercel.app/"
+  },
+  {
+    num: '03',
     title: 'Movie Catalogue',
-    description: 'Fullstack project with Spring Boot, Java, React.js, JavaScript',
+    description: 'Fullstack project React.js & Java',
     stack: [
       {
         name: "Java"
@@ -50,12 +76,35 @@ const projects = [
         name: "React.js"
       },
       {
-        name: "JavaScript"
+        name: "MongoDB"
       },
     ],
-    image: '/assets/project/thumb2.png',
-    github: '/project',
+    image: '/assets/project/movie.png',
+    github: '',
     live: "Still developing...",
+    url: ""
+  },
+  {
+    num: '04',
+    title: 'Car Rental Website',
+    description: 'Uni project - received 44/45 marks',
+    stack: [
+      {
+        name: "PHP"
+      },
+      {
+        name: "JavaScript"
+      },
+      {
+        name: "BootStrap5"
+      },
+      {
+        name: "MySQL"
+      },
+    ],
+    image: '/assets/project/car.png',
+    github: 'https://github.com/LavaXD/Car-Rental-Website',
+    live: "AWS free account expired..",
     url: ""
   }
 ]
@@ -92,7 +141,7 @@ const Work = () => {
                 {project.description}
               </p>
               {/* stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-2 ">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">

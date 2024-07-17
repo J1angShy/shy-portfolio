@@ -8,8 +8,8 @@ import { IoLogoWhatsapp } from "react-icons/io";
 const socials = [
   { icon: <FaGithub />, path: 'https://github.com/LavaXD' },
   { icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/shuai-jiang2001/' },
-  { icon: <IoLogoWhatsapp />, path: '' },
-  { icon: <IoLogoWechat />, path: '' }, 
+  { icon: <IoLogoWhatsapp />, path: '/assets/whatsApp.jpeg' },
+  { icon: <IoLogoWechat />, path: '/assets/wechat.jpeg' }, 
 ]
 
 const Social = ({iconStyles, containerStyles}) => {
