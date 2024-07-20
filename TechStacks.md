@@ -1,5 +1,5 @@
 - Next.js
-- Shadcn.ui (shadcn-ui@latest add input button scroll-area sheet tabs textarea tooltip)
+- Shadcn.ui (npx shadcn-ui@latest add input button scroll-area sheet tabs textarea tooltip)
 - Tailwind.css
 - Framer-motion (npm i framer-motion)
 - React-Countup (npm i react-countup) 

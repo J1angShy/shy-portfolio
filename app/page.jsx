@@ -20,15 +20,16 @@ const page = () => {
 
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
-            <br />
-            <span className="h1">
-              Hello I'm <br /><span className="text-accent ">Shuai Jiang</span>
-            </span>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafing elegant digital experiences and I am proficient in varoious programming language and technologies
-            </p>
+            {/* <div><span className="text-xl">Software Developer</span></div> */}
 
+              <div className="h1 mb-9">
+                Hello I'm <br /><span className="text-accent ">Shuai Jiang</span>
+            </div>
+
+              <div className="max-w-[500px] mb-16 text-white/80">
+                Driven by a continuous learning mindset, I am eager to contribute to innovative projects and collaborate with talented teams to deliver exceptional digital experiences.
+              </div>
+            
             {/* btn & socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="/assets/resume/Shuai Jiang - CV.pdf">

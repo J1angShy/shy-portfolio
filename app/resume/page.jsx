@@ -4,28 +4,28 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { motion } from "framer-motion";
-import { FaHtml5, FaJs, FaReact, FaJava, FaPhp } from 'react-icons/fa';
-import { SiDocker, SiNextdotjs, SiSpringboot, SiTailwindcss } from 'react-icons/si';
+import { FaHtml5, FaJs, FaReact, FaJava, FaPhp, FaJenkins } from 'react-icons/fa';
+import { SiDocker, SiNextdotjs, SiSpringboot, SiTailwindcss, SiMongodb, SiMysql, SiSpringsecurity } from 'react-icons/si';
 
 const about = {
   title: 'about me',
-  description: 'Looking for a internship/job in software engineering ~',
+  description: 'Looking for a internship in software engineering ~',
   info: [
     {
       fieldName: "Name",
       fieldValue: "Shuai Jiang",
     },
     {
-      fieldName: "Phone",
-      fieldValue: "(+61) 0490 849 955",
-    },
-    {
       fieldName: "Gender",
       fieldValue: "Male",
     },
     {
-      fieldName: "Email",
-      fieldValue: "shuai.jiang-3@student.uts.edu.au",
+      fieldName: "Visa",
+      fieldValue: "Student Visa (500)",
+    },
+    {
+      fieldName: "Graduation data",
+      fieldValue: "2025-5-30",
     },
     {
       fieldName: "Nationality",
@@ -104,8 +104,20 @@ const skills = {
       icon: <FaReact />
     },
     {
+      name: 'Jenkins',
+      icon: <FaJenkins />
+    }, 
+    {
       name: 'Docker',
       icon: <SiDocker />
+    }, 
+    {
+      name: 'Mysql',
+      icon: <SiMysql />
+    }, 
+    {
+      name: 'MongoDB',
+      icon: <SiMongodb />
     }, 
   ]
 }
@@ -121,16 +133,34 @@ const Resume = () => {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        <Tabs defaultValue="education" className="flex flex-col xl:flex-row gap-[60px]">
+        <Tabs defaultValue="about" className="flex flex-col xl:flex-row gap-[60px]">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6" >
+            <TabsTrigger value="about">About me</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="skills">Skills</TabsTrigger> 
           </TabsList>
 
           {/* content */}
           <div className="min-h-[70vh] w-full">
+
+            {/* about */}
+            <TabsContent value="about" className="w-full text-center xl:text-left">
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-xl ">{item.fieldValue}</span>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            </TabsContent>
 
             {/* education */}
             <TabsContent value="education" className="w-full">
@@ -208,23 +238,7 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/* about */}
-            <TabsContent value="about" className="w-full text-center xl:text-left">
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item, index) => {
-                    return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl ">{item.fieldValue}</span>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
+            
           </div>
         </Tabs>
       </div>
