@@ -4,6 +4,10 @@
 - Framer-motion (npm i framer-motion)
 - React-Countup (npm i react-countup) 
 - Swiper (npm i swiper)
+- Three.js (npm i three)
+- React-Three-Fiber (npm i react-three-fiber)
+- https://vercel.com/blog/building-an-interactive-3d-event-badge-with-react-three-fiber (portrait badge)
+
 
 Notes about pushing local code to remote github repository
 ##1  Generate key using following command
@@ -19,7 +23,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 eval $(ssh-agent -s)
 ```
 
-##4 Add your key to SSH proxy
+##4 Add your key to SSH proxy (zhongqing922)
 ```bash
 ssh-add ~/.ssh/'your key file name'
 ```
