@@ -25,7 +25,7 @@ eval $(ssh-agent -s)
 
 ##4 Add your key to SSH proxy (zhongqing922)
 ```bash
-ssh-add ~/.ssh/'your key file name'
+ssh-add ~/.ssh/mykey
 ```
 
 ##5 Test connection to Github

@@ -57,6 +57,11 @@ const education = {
 const experience = {
   items: [
     {
+      duration: '2024.7 - Present',
+      position: 'Web Developer Intern',
+      company: 'Tidyteddy'
+    },
+    {
       duration: '2024.6 - 2024.7',
       position: 'Data Scientist',
       company: 'NSW Jobs Connect Program'
