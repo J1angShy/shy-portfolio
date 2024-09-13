@@ -1,13 +1,3 @@
-- Next.js
-- Shadcn.ui (npx shadcn-ui@latest add input button scroll-area sheet tabs textarea tooltip)
-- Tailwind.css
-- Framer-motion (npm i framer-motion)
-- React-Countup (npm i react-countup) 
-- Swiper (npm i swiper)
-- Three.js (npm i three)
-- React-Three-Fiber (npm i react-three-fiber)
-- https://vercel.com/blog/building-an-interactive-3d-event-badge-with-react-three-fiber (portrait badge)
-
 
 Notes about pushing local code to remote github repository
 ##1  Generate key using following command
@@ -39,6 +29,10 @@ git init
 git add .
 git commit -m "Initial commit"
 git remote add origin <url>
+git fetch
+git switch <branch name>
+git pull origin shy --allow-unrelated-histories
 git push -u origin master
+git merge <branch name>
 ```
 
