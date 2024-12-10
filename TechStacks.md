@@ -30,9 +30,12 @@ git add .
 git commit -m "Initial commit"
 git remote add origin <url>
 git fetch
-git switch <branch name>
+git switch/checkout <branch name>
 git pull origin shy --allow-unrelated-histories
 git push -u origin master
 git merge <branch name>
+git log
+git reset --hard <commit id>
+git rebase -i main
 ```
 
